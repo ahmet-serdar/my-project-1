@@ -13,9 +13,9 @@ let scores, currentScore, activePlayer, gamePlaying, finalScore;
 newGame();
 gamePlaying = true;
 
-document.querySelector(".btn-roll").addEventListener("click", function() {
+document.getElementById("roll").addEventListener("click", function() {
   if (gamePlaying) {
-    finalScore = document.querySelector(".final-score").value;
+    finalScore = document.getElementById("finalScore").value;
     if (finalScore) {
       let dice1 = Math.floor(Math.random() * 6) + 1;
       let dice2 = Math.floor(Math.random() * 6) + 1;
@@ -43,7 +43,7 @@ document.querySelector(".btn-roll").addEventListener("click", function() {
   }
 });
 
-document.querySelector(".btn-hold").addEventListener("click", function() {
+document.getElementById("hold").addEventListener("click", function() {
   if (gamePlaying) {
     scores[activePlayer] += currentScore;
     document.getElementById("score-" + activePlayer).innerHTML =
